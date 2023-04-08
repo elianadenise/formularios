@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #161616;
+  }
+  p, h2, h3{
+    color: #CBE4DE;
+  }
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #2C3333;
+    background-color: #2C3333;
+    padding: 2vh;
+    label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-left: 1vh;
+        color: #CBE4DE;
+    }
+
+    .ingreso {
+        border: none;
+        background-color: #2E4F4F;
+        border-radius: 0.3rem;
+        height: 3vh;
+        font-family: "Hind Madurai", sans-serif;
+        font-weight: 500;
+        outline-color: #98a8f8;
+        color: #CBE4DE;
+        margin-left: 1vh;
+        background: #2E4F4F;
+        transition: 1s;
+
+        &:focus {
+            outline-color: #98a8f8;
+            border-radius: 0.3rem;
+            background-color: #2E4F4F!important;
+            background: #2E4F4F;
+        }
+    }
+
+    .btn {
+        border: none;
+        background-color: #98a8f8;
+        border-radius: 0.3rem;
+        height: 3vh;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #faf7f0;
+        padding: 0 1vh 0 1vh;
+        display: flex;
+        align-self: center;
+        margin-left: 1vh;
+        transition: 0.5s; 
+        &:hover {
+            outline-color: #98a8f8;
+            border-radius: 0.3rem;
+            background-color: #d2daff;
+            color: #000000;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {}

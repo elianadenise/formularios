@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: linear-gradient(#dddeff 1px, transparent 1px),
+    linear-gradient(to right, #dddeff 1px, #ffffff 1px);
+  background-size: 20px 20px;
+  border-bottom: 5px solid #b1b2ff;
+  .flecha {
+    color: #b1b2ff;
+    margin-top: 6vh;
+    &:hover {
+      color: #758bfa;
+    }
+  }
+  p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,61 @@
+.sintaxis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border: 1px solid #b1b2ff;
+    border-bottom: 5px solid #b1b2ff;
+    // border-radius: 0.3rem;
+    // background-color: #f0f1f6;
+    padding: 3vh;
+    margin: 0 0 3vh 3vh;
+    height: auto;
+    transition: 0.3s;
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    p {
+      font-family: "Roboto Mono", monospace;
+      font-size: 400;
+      .action {
+        color: #e255b3;
+      }
+      .method {
+        color: #53b6d7;
+      }
+      .enctype {
+        color: #ff8e00;
+      }
+    }
+  }
+  .codigo {
+    width: 80vh;
+  }
+
+  .glosario {
+    width: 90vh;
+  }
+}
+@media screen and (max-width: 990px) {
+    .sintaxis {
+      article {
+        padding: 3vh;
+        align-items: center;
+        margin: 0 3vh 3vh 3vh;
+        width: auto;
+      }
+      .codigo {
+        width: auto;
+      }
+    
+      .glosario {
+        width: auto;
+      }
+    }
+  }

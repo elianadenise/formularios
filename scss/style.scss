@@ -1,0 +1,21 @@
+@import "layout/header";
+@import "layout/footer";
+@import "components/tipografias";
+@import "components/forms";
+@import "components/articles";
+@import "components/sintaxis";
+@import "components/buttons";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+// Scroll suave
+html {
+  scroll-behavior: smooth;
+}

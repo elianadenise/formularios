@@ -1,0 +1,82 @@
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    border: 1px solid #B1B2FF;
+    // border-radius: 0.3rem;
+    background-color: #B1B2FF;
+    padding: 2vh;
+    margin: 0vw;
+    width: 100%;
+    label, .label {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        margin-bottom: 1vh;
+    }
+
+    .ingreso {
+        border: none;
+        background-color: #d2daff;
+        // border-radius: 0.3rem;
+        height: 3vh;
+        font-family: "Hind Madurai", sans-serif;
+        padding-left: 10px;
+        font-weight: 500;
+        outline-color: #98a8f8;
+        color: #000000;
+        transition: 1s;
+        width: 100%;
+        &:focus {
+            outline-color: #98a8f8;
+            // border-radius: 0.3rem;
+            background-color: #d2daff;
+        }
+    }
+
+    textarea{
+        border: none;
+        background-color: #d2daff;
+        font-family: "Hind Madurai", sans-serif;
+        padding-left: 10px;
+        font-weight: 500;
+        outline-color: #98a8f8;
+        color: #000000;
+        transition: 1s;
+        width: 100%;
+        &:focus {
+            outline-color: #98a8f8;
+            background-color: #d2daff;
+        }
+    }
+
+    .checked{
+        display: flex;
+        flex-direction: column;
+
+        .form-check-input:checked {
+            background-color: #DBC9B8;
+            border-color: #DBC9B8;
+        }
+    } 
+}
+
+@media screen and (max-width: 1050px) {
+    // form {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: start;
+    // justify-content: center;
+label{
+    margin: 0;
+}
+    .ingreso{
+        width: 100%;
+        margin: 1vh 0;
+    }
+.btn{
+    margin-left: 0;
+}
+    // }
+}

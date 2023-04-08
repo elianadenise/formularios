@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid #b1b2ff;
+    padding: 5vh;
+    margin-top: 5vh;
+    a{
+        padding-top: 1vh;
+        color: #98a8f8;
+        text-decoration: none;
+        i{
+            font-size: 20px;
+        }
+        &:hover{
+            color: #758bfa;
+        }
+    }
+}

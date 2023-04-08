@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <!--remixicon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600&family=Lora:ital,wght@1,500&family=Montserrat:wght@400;700;900&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <header>
+        <p>Todo lo que tenés que saber sobre</p>
+        <h1>FORMULARIOS en HTML</h1>
+        <a href="" class="btn"><i class="fa-solid fa-eye fa-sm"></i>&nbsp;&nbsp;Ver código</a>
+        <a href="#main" class="flecha"><i class="fa-solid fa-chevron-down fa-xl"></i></a>
+
+    </header>
+    <main id="main">
+
+        <h2>Sintaxis</h2>
+        <section class="sintaxis">
+            <article class="codigo">
+                <p>
+                    <span>
+                        <span><</span><span>form <span class="action">action="archivo.ej"</span> <span class="method">method="get/post"</span> <span class="enctype">enctype="multipart/form-data"</span>></span><br>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<</span><span>contenido del formulario></span><br>
+                    <span><</span><span>/form></span><br>
+                </p>
+            </article>
+            <article class="glosario">
+                <p><span class="action">action:</span> Define la acción que se realiza cuando se envía un formulario. Especifica 
+                    una dirección URL dentro del servidor donde enviar el formulario.</p>
+                <p><span class="method">method:</span> Define de que manera se van a transmitir los datos hacia el archivo que 
+                    se define en el action. <br>
+                    Existen dos métodos: <br>
+                    - <span>get (por defecto):</span> cuando la información a enviar no es sensible; los datos del formulario 
+                    son visible en la dirección url de la página. Recomendado para poca cantidad de texto.<br> 
+                    - <span>post:</span> cuando la información es sensible; ofrece mayor seguridad dado que los datos no están
+                    visibles en la dirección de la página.</p>
+                <p><span class="enctype">enctype:</span> Especifica cómo los datos serán codificados el enviarlos al servidor. 
+                    Sólo se puede aplicar si el método utilizado es post. <br>
+                    Las opciones son: application/x-www-form.urlencoded (por defecto), multipart/form-data y text/plain.</p>
+            </article>
+        </section>
+
+        <h2>Tipos de inputs</h2>
+        <section>
+            <article>
+                <h3>Text</h3>
+                <p>Este input permite el ingreso de datos alfanuméricos. Incluye caracteres especiales.</p>
+                <form action="#">
+                    <label for="nombre">Ingresá tu nombre </label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Ingresá tu nombre" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+
+            </article>
+            <article>
+                <h3>Number</h3>
+                <p>Sirve para el ingreso de datos numericos. Puede establecerse un mínimo y un máximo; además, permite
+                    la validación de datos.</p>
+                <form action="#">
+                    <label for="edad">Ingresá tu edad</label>
+                    <input id="edad" type="number" name="edad" placeholder="Ingrese su edad" min="0" max="200"
+                        class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Radio</h3>
+                <p>El usuario podrá seleccionar una sola opción del grupo de radios. Para identificarse como grupo de
+                    radios, deben tener el mismo name pero distinto value. <br>
+                    El atributo <span>checked</span> permite establecer una opción predefinida.
+                </p>
+
+                <form action="#">
+                    <div>
+                        <p class="label">Acepto las condiciones</p>
+                        <input id="si" type="radio" name="aceptar" value="si" checked>
+                        <label for="si" class="p">Si</label>
+                        <input id="no" type="radio" name="aceptar" value="no">
+                        <label for="no" class="p">No</label>
+
+                    </div>
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Checkbox</h3>
+                <p>El usuario podrá seleccionar varias opciones del grupo de radios. Para identificarse como grupo de
+                    checkboxes, deben tener el mismo name pero distinto value.<br>
+                    El atributo <span>checked</span> permite establecer una opción predefinida.
+                </p>
+
+                <form action="#">
+
+                    <div>
+                        <p class="label">¿Qué lenguajes sabés?</p>
+                        <input id="php" type="checkbox" name="php" value="php">
+                        <label for="php" class="p">&nbsp;Java&nbsp;&nbsp;&nbsp;</label>
+                        <!-- Tiene el atributo checked asignado por eso, aparece seleccionado cuando carga la pagina -->
+                        <input id="javascript" type="checkbox" name="javascript" value="javascript" checked>
+                        <label for="javascript" class="p">&nbsp;Python&nbsp;&nbsp;&nbsp;</label>
+                        <input id="css" type="checkbox" name="css" value="css">
+                        <label for="css" class="p">&nbsp;Javascript&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Password</h3>
+                <p>Ideado para el ingreso de contraseñas ya que no pueden visualizarse los caracteres ingresados.</p>
+
+                <form action="#">
+                    <label for="pass">Ingresá tu contraseña</label>
+                    <input id="pass" type="password" name="pass" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Email</h3>
+                <p>Ideado paa el ingreso de correos electrónicos. Este input posee una validación para identificar si el
+                    ingreso es un correo electrónico o no.
+                </p>
+
+                <form action="#">
+                    <label for="mail">Ingresá tu email</label>
+                    <input id="mail" type="email" name="emails" placeholder="Ingrese su email" required class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Tel</h3>
+                <p>Ideado para el ingreso de números telefónicos. En versión mobile, el teclado es numérico.
+                </p>
+
+                <form action="#"">
+                    <label for=" tel">Ingresá tu teléfono</label>
+                    <input id="tel" type="tel" name="tel" placeholder="Ingrese su Telefono" pattern="[0-9]{8,}" required
+                        class="ingreso">
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Date</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="fecha">Ingresá una fecha</label>
+                    <input id="fecha" type="date" name="fecha" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Color</h3>
+                <p>El usuario puede seleccionar un color o ingresarlo manualmente en valor rgb.</p>
+
+                <form action="#">
+                    <label for="color">Ingresá un color</label>
+                    <input id="color" type="color" name="color" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>URL</h3>
+                <p>Este input valida las url ingresadas.</p>
+
+                <form action="#">
+                    <label for="url">Ingrese una url</label>
+                    <input id="url" type="url" name="url" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <article>
+                <h3>Search</h3>
+                <p>Sirve como entrada para realizar una búsqueda dentro de la página.</p>
+
+                <form action="#">
+                    <label for="archivo">Buscá algo</label>
+                    <input type="search" id="busqueda" name="q" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <article>
+                <h3>File</h3>
+                <p>Ideado para seleccionar y subir archivos.</p>
+
+                <form action="#">
+                    <label for="archivo">Seleccioná una imagen</label>
+                    <input type="file" name="archivo" id="archivo" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+        </section>
+
+        <h2>Otros campos útiles</h2>
+        <section>
+            <article>
+                <h3>Textarea</h3>
+                <p>El elemento textarea define un campo de entrada de varias líneas. Los atributos rows y cols
+                    especifican el número de líneas y ancho respectivamente. </p>
+
+                <form action="#">
+                    <textarea name="mensaje" id="" cols="50" rows="5" placeholder="Deja tu mensaje..."></textarea>
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <article>
+                <h3>Select y Option</h3>
+                <p>El elemento select va a tener un name declarado, dentro de este, los options son todas las opciones
+                    que se nos van a desplegar para poder elegir, este elemento va a tener el atributo value definido
+                    que es el valor que se va a enviar atraves de este formulario. <br>
+                    El atributo <span>selected</span> permite establecer una opción predefinida.</p>
+
+                <form action="#">
+                    <label for="provincias">Provincias</label>
+                    <select id="provincias" name="provincias" class="ingreso">
+                        <option value="">Seleccione una provincia</option><!--sin value-->
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Córdoba</option>
+                        <option value="3">Salta</option>
+                        <option value="4">Tierra del Fuego</option>
+                    </select>
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <article>
+                <h3>Datalist</h3>
+                <p>Se establece una lista predefinida de opciones, la cual no condiciona al usuario; ya que este puede
+                    ingresar datos que no se encuentran en la misma.</p>
+
+                <form action="#">
+                    <datalist id="informacion" class="ingreso">
+                        <option value="Ciudad Madero">
+                        <option value="Ciudad Evita">
+                        <option value="Tapiales">
+                    </datalist>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" name="postal" list="informacion" class="ingreso">
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+        </section>
+
+        <h2>Atributos de los campos</h2>
+        <section>
+            <article>
+                <h3>Autofocus</h3>
+                <p>El atributo autofocus permite que una vez cargada la página, el campo al que se le asigna sea el
+                    que tenga el cursor.</p>
+                <form action="#">
+
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Placeholder</h3>
+                <p>Este atributo será el texto alternativo dentro del input. Al ingresar el dato, éste desaparece.</p>
+                <form action="#">
+
+                    <label for="nombre1">Nombre</label>
+                    <input id="nombre1" type="text" name="nombre1" placeholder="Ingrese su Nombre" class="ingreso">
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Required</h3>
+                <p>Incluir el atributo required genera que ese campo sea obligatorio.</p>
+                <form action="#">
+
+                    <label for="apellido">Apellido</label>
+                    <input id="apellido" type="text" name="apellido" placeholder="Apellido" required class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Value</h3>
+                <p>Lo que se establece en el atributo value, será el contenido por defecto.</p>
+                <form action="#">
+
+                    <label for="nombre2">Nombre:</label>
+                    <input id="nombre2" type="text" name="nombre2" value="Eliana Navarro" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Checked</h3>
+                <p>
+                    El atributo checked permite establecer una opción predefinida. Se puede utilizar en inputs radio y
+                    checkbox.
+                </p>
+
+                <form action="#">
+                    <div>
+                        <p class="label">Acepto las condiciones</p>
+                        <input id="si" type="radio" name="aceptar" value="si" checked>
+                        <label for="si" class="p">Si</label>
+                        <input id="no" type="radio" name="aceptar" value="no">
+                        <label for="no" class="p">No</label>
+
+                    </div>
+
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            <article>
+                <h3>Selected</h3>
+                <p>
+                    Este atributo permite establecer una opción predefinida. Se puede utilizar en campo datalist.</p>
+
+                <form action="#">
+                    <label for="provincias">Provincias</label>
+                    <select id="provincias" name="provincias" class="ingreso">
+                        <option value="">Seleccione una provincia</option><!--sin value-->
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Córdoba</option>
+                        <option value="3">Salta</option>
+                        <option value="4" selected>Tierra del Fuego</option>
+                    </select>
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Codeado con &nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 1.5s;"></i>&nbsp; por
+            Eliana</p>
+        <div>
+            <a href="https://github.com/elianadenise" target="_blank" rel="noopener noreferrer"><i
+                    class="ri-github-line"></i></a>
+            <a href="https://www.linkedin.com/in/elianadnavarro/" target="_blank" rel="noopener noreferrer"><i
+                    class="ri-linkedin-box-line"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
