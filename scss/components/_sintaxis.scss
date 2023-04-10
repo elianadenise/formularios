@@ -32,6 +32,22 @@
       .enctype {
         color: #ff8e00;
       }
+      
+      .for{
+        color: #5145C4;
+      }
+
+      .type{
+        color: #63b997;
+      }
+
+      .id{
+        color: #995DA8;
+      }
+
+      .name{
+        color: #F66251;
+      }
     }
   }
   .codigo {
@@ -39,7 +55,7 @@
   }
 
   .glosario {
-    width: 90vh;
+    width: 120vh;
   }
 }
 @media screen and (max-width: 990px) {

@@ -34,30 +34,46 @@
         <section class="sintaxis">
             <article class="codigo">
                 <p>
-                    <span>
-                        <span><</span><span>form <span class="action">action="archivo.ej"</span> <span class="method">method="get/post"</span> <span class="enctype">enctype="multipart/form-data"</span>></span><br>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<</span><span>contenido del formulario></span><br>
-                    <span><</span><span>/form></span><br>
+                        <span><</span><span>form <span class="action">action="ejemplo.htm"</span> <span class="method">method="get/post"</span> <span class="enctype">enctype="multipart/form-data"</span>></span><br>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span><span>label <span class="for">for="nombre"</span>>Ingresá tu nombre<span><</span>/label></span> <br>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<</span><span>input <span class="type">type="text"</span> <span class="id">id="nombre"</span> <span class="name">name="nombre"</span>></span> <br>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<</span><span>input <span class="type">type="submit"</span> value="Enviar"></span> <br>
+                        <span><</span><span>/form></span><br>
                 </p>
             </article>
             <article class="glosario">
-                <p><span class="action">action:</span> Define la acción que se realiza cuando se envía un formulario. Especifica 
+                <h3>Atributos de form</h3>
+                <p><span class="action">action:</span> Define la acción que se realiza cuando se envía un formulario. Establece 
                     una dirección URL dentro del servidor donde enviar el formulario.</p>
-                <p><span class="method">method:</span> Define de que manera se van a transmitir los datos hacia el archivo que 
+                <p><span class="method">method:</span> Define de qué manera se van a transmitir los datos hacia el archivo que 
                     se define en el action. <br>
                     Existen dos métodos: <br>
                     - <span>get (por defecto):</span> cuando la información a enviar no es sensible; los datos del formulario 
-                    son visible en la dirección url de la página. Recomendado para poca cantidad de texto.<br> 
+                    son visibles en la dirección URL de la página. Recomendado para poca cantidad de texto.<br> 
                     - <span>post:</span> cuando la información es sensible; ofrece mayor seguridad dado que los datos no están
-                    visibles en la dirección de la página.</p>
-                <p><span class="enctype">enctype:</span> Especifica cómo los datos serán codificados el enviarlos al servidor. 
+                    visibles en la dirección URL de la página.</p>
+                <p><span class="enctype">enctype:</span> Especifica cómo los datos serán codificados al enviarlos al servidor. 
                     Sólo se puede aplicar si el método utilizado es post. <br>
                     Las opciones son: application/x-www-form.urlencoded (por defecto), multipart/form-data y text/plain.</p>
+
+                <h3>Atributos de label</h3>
+                <p><span class="for">for: </span> este atributo debe coincidir con el atributo <span class="id">id</span> del elemento del 
+                    formulario, para establecer una relación entre ellos. 
+                </p>
+                <h3>Atributos de input</h3>
+                <p><span class="type">type:</span> es el tipo de input. Sus variantes son: button, checkbox, color, date, datetime-local,
+                    email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week.
+                </p>
+                <p><span class="id">id: </span>es el identificador único del campo del formulario.</p>
+                <p><span class="name">name:</span> atributo obligatorio para que el valor del campo se envíe al enviar un formulario. 
+                    Los campos sin el atributo name no son
+                    enviados.</p>
             </article>
         </section>
 
         <h2>Tipos de inputs</h2>
         <section>
+            <!--INPUT TEXT-->
             <article>
                 <h3>Text</h3>
                 <p>Este input permite el ingreso de datos alfanuméricos. Incluye caracteres especiales.</p>
@@ -68,10 +84,12 @@
                 </form>
 
             </article>
+
+            <!--INPUT NUMBER-->
             <article>
                 <h3>Number</h3>
-                <p>Sirve para el ingreso de datos numericos. Puede establecerse un mínimo y un máximo; además, permite
-                    la validación de datos.</p>
+                <p>Sirve para el ingreso de datos numéricos. Puede establecerse un mínimo y un máximo; además, permite
+                    la validación de datos. En versión mobile, el teclado es numérico.</p>
                 <form action="#">
                     <label for="edad">Ingresá tu edad</label>
                     <input id="edad" type="number" name="edad" placeholder="Ingrese su edad" min="0" max="200"
@@ -79,6 +97,8 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
+
+            <!--INPUT RADIO-->
             <article>
                 <h3>Radio</h3>
                 <p>El usuario podrá seleccionar una sola opción del grupo de radios. Para identificarse como grupo de
@@ -99,9 +119,11 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
+
+            <!--INPUT CHECKBOX-->
             <article>
                 <h3>Checkbox</h3>
-                <p>El usuario podrá seleccionar varias opciones del grupo de radios. Para identificarse como grupo de
+                <p>El usuario podrá seleccionar varias opciones del grupo de checkboxes. Para identificarse como grupo de
                     checkboxes, deben tener el mismo name pero distinto value.<br>
                     El atributo <span>checked</span> permite establecer una opción predefinida.
                 </p>
@@ -122,6 +144,8 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
+
+            <!--INPUT PASSWORD-->
             <article>
                 <h3>Password</h3>
                 <p>Ideado para el ingreso de contraseñas ya que no pueden visualizarse los caracteres ingresados.</p>
@@ -132,9 +156,11 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
+            
+            <!--INPUT EMAIL-->
             <article>
                 <h3>Email</h3>
-                <p>Ideado paa el ingreso de correos electrónicos. Este input posee una validación para identificar si el
+                <p>Ideado para el ingreso de correos electrónicos. Este input posee una validación para identificar si el
                     ingreso es un correo electrónico o no.
                 </p>
 
@@ -144,6 +170,8 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
+
+            <!--INPUT TEL-->
             <article>
                 <h3>Tel</h3>
                 <p>Ideado para el ingreso de números telefónicos. En versión mobile, el teclado es numérico.
@@ -157,19 +185,8 @@
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
-            <article>
-                <h3>Date</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
-
-                <form action="#">
-                    <label for="fecha">Ingresá una fecha</label>
-                    <input id="fecha" type="date" name="fecha" class="ingreso">
-                    <input type="submit" value="¡Enviar!" class="btn">
-                </form>
-            </article>
+           
+            <!--INPUT COLOR-->
             <article>
                 <h3>Color</h3>
                 <p>El usuario puede seleccionar un color o ingresarlo manualmente en valor rgb.</p>
@@ -191,6 +208,82 @@
                 </form>
             </article>
 
+            <!--INPUT DATE-->
+            <article>
+                <h3>Date</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="fecha">Ingresá una fecha</label>
+                    <input id="fecha" type="date" name="fecha" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT TIME-->
+            <article>
+                <h3>Time</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="hora">Ingresá una fecha</label>
+                    <input type="time" name="hora" id="hora" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT DATETIME-LOCAL-->
+            <article>
+                <h3>Datetime-local</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="datatimelocal">Ingresá una fecha</label>
+                    <input type="datetime-local" name="datatimelocal" id="datatimelocal" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT MONTH-->
+            <article>
+                <h3>Month</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="mes">Ingresá una fecha</label>
+                    <input type="month" id="mes" name="mes" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT WEEK-->
+            <article>
+                <h3>Week</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="fecha">Ingresá una fecha</label>
+                    <input type="week" id="fecha" name="fecha" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT SEARCH-->
             <article>
                 <h3>Search</h3>
                 <p>Sirve como entrada para realizar una búsqueda dentro de la página.</p>
@@ -202,6 +295,7 @@
                 </form>
             </article>
 
+            <!--INPUT FILE-->
             <article>
                 <h3>File</h3>
                 <p>Ideado para seleccionar y subir archivos.</p>
@@ -210,6 +304,79 @@
                     <label for="archivo">Seleccioná una imagen</label>
                     <input type="file" name="archivo" id="archivo" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT RANGE-->
+            <article>
+                <h3>Range</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="rango">Ingresá una fecha</label>
+                    <input type="range" id="rango" name="rango" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT RESET-->
+            <article>
+                <h3>Reset</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="reset">Ingresá una fecha</label>
+                    <input type="reset" id="reset" name="reset" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT HIDDEN-->
+            <article>
+                <h3>Hidden</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="escondido">El input está escondido</label>
+                    <input type="hidden" id="escondido" name="escandido" class="ingreso">
+                    <input type="submit" value="¡Enviar!" class="btn">
+                </form>
+            </article>
+            
+            <!--INPUT SUBMIT-->
+            <article>
+                <h3>Submit</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="fecha">Ingresá una fecha</label>
+                    <input type="submit" value="¡Soy un submit!" class="btn">
+                </form>
+            </article>
+
+            <!--INPUT BUTTON-->
+            <article>
+                <h3>Button</h3>
+                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
+                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
+                    <br>Variantes de este input son: time, datetime-local, month, week.
+                <p>
+
+                <form action="#">
+                    <label for="fecha">Ingresá una fecha</label>
+                    <input type="button" value="¡Soy un botón!" class="btn">
                 </form>
             </article>
         </section>
@@ -222,16 +389,17 @@
                     especifican el número de líneas y ancho respectivamente. </p>
 
                 <form action="#">
-                    <textarea name="mensaje" id="" cols="50" rows="5" placeholder="Deja tu mensaje..."></textarea>
+                    <textarea name="mensaje" id="" cols="50" rows="5" placeholder="Escribí tu mensaje..."></textarea>
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
 
             <article>
                 <h3>Select y Option</h3>
-                <p>El elemento select va a tener un name declarado, dentro de este, los options son todas las opciones
-                    que se nos van a desplegar para poder elegir, este elemento va a tener el atributo value definido
-                    que es el valor que se va a enviar atraves de este formulario. <br>
+                <p>La etiqueta padre será <span>select</span>, la cual tendrá un name declarado. 
+                    Mientras que las etiquetas hijo serán <span>option</span>, las cuales serán utilizadas para 
+                    establecer las opciones a desplegar y deberán tener un atributo value definido 
+                    cada una para identificar la elección al enviar el formulario.<br>
                     El atributo <span>selected</span> permite establecer una opción predefinida.</p>
 
                 <form action="#">
@@ -250,7 +418,8 @@
             <article>
                 <h3>Datalist</h3>
                 <p>Se establece una lista predefinida de opciones, la cual no condiciona al usuario; ya que este puede
-                    ingresar datos que no se encuentran en la misma.</p>
+                    ingresar datos que no se encuentran en la misma. Al ingresar datos, el usuario podrá ver un predictivo ejecutado a partir de la lista predefinida. <br>
+            La etiqueta padre será<span>datalist</span>, mientras que las etiquetas hijo serán <span>option</span>.</p>
 
                 <form action="#">
                     <datalist id="informacion" class="ingreso">
@@ -275,8 +444,8 @@
                     que tenga el cursor.</p>
                 <form action="#">
 
-                    <label for="nombre">Nombre</label>
-                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" class="ingreso">
+                    <label for="nombre2">Nombre</label>
+                    <input id="nombre2" type="text" name="nombre" placeholder="Nombre" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>

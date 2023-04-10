@@ -35,7 +35,7 @@ footer {
     footer a:hover {
       color: #758bfa; }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Montserrat", sans-serif; }
 
 h1 {
@@ -43,6 +43,9 @@ h1 {
 
 h2 {
   margin: 5vh 0 3vh 10vh; }
+
+h3 {
+  font-family: "Roboto Mono", monospace; }
 
 p, .p {
   font-family: "Hind Madurai", sans-serif;
@@ -172,10 +175,18 @@ section {
         color: #53b6d7; }
       .sintaxis article p .enctype {
         color: #ff8e00; }
+      .sintaxis article p .for {
+        color: #5145C4; }
+      .sintaxis article p .type {
+        color: #63b997; }
+      .sintaxis article p .id {
+        color: #995DA8; }
+      .sintaxis article p .name {
+        color: #F66251; }
   .sintaxis .codigo {
     width: 80vh; }
   .sintaxis .glosario {
-    width: 90vh; }
+    width: 120vh; }
 
 @media screen and (max-width: 990px) {
   .sintaxis article {
