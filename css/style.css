@@ -144,7 +144,6 @@ section {
     flex-direction: column; }
     section article {
       padding: 3vh;
-      align-items: center;
       margin: 0 3vh 3vh 3vh;
       width: auto; } }
 
@@ -190,10 +189,7 @@ section {
 
 @media screen and (max-width: 990px) {
   .sintaxis article {
-    padding: 3vh;
-    align-items: center;
-    margin: 0 3vh 3vh 3vh;
-    width: auto; }
+    margin: 0 3vh 3vh 3vh; }
   .sintaxis .codigo {
     width: auto; }
   .sintaxis .glosario {

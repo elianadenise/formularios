@@ -24,7 +24,7 @@
     <header>
         <p>Todo lo que tenés que saber sobre</p>
         <h1>FORMULARIOS en HTML</h1>
-        <a href="https://github.com/elianadenise/formularios/blob/main/index.html" class="btn"><i class="fa-solid fa-eye fa-sm"></i>&nbsp;&nbsp;Ver código</a>
+        <a href="https://github.com/elianadenise/formularios/blob/main/index.html" class="btn" target="_blank"><i class="fa-solid fa-eye fa-sm"></i>&nbsp;&nbsp;Ver código</a>
         <a href="#main" class="flecha"><i class="fa-solid fa-chevron-down fa-xl"></i></a>
 
     </header>
@@ -78,7 +78,7 @@
                 <h3>Text</h3>
                 <p>Este input permite el ingreso de datos alfanuméricos. Incluye caracteres especiales.</p>
                 <form action="#">
-                    <label for="nombre">Ingresá tu nombre </label>
+                    <label for="nombre">Ingresá tu nombre</label>
                     <input id="nombre" type="text" name="nombre" placeholder="Ingresá tu nombre" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -192,7 +192,7 @@
                 <p>El usuario puede seleccionar un color o ingresarlo manualmente en valor rgb.</p>
 
                 <form action="#">
-                    <label for="color">Ingresá un color</label>
+                    <label for="color">Ingresá tu color favorito</label>
                     <input id="color" type="color" name="color" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -214,7 +214,7 @@
                 <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
                     calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
                     <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                </p>
 
                 <form action="#">
                     <label for="fecha">Ingresá una fecha</label>
@@ -226,13 +226,10 @@
             <!--INPUT TIME-->
             <article>
                 <h3>Time</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
-
+                <p>Ideado para seleccionar una hora sin especificar zona horaria.</p>
+                
                 <form action="#">
-                    <label for="hora">Ingresá una fecha</label>
+                    <label for="hora">Ingresá una hora</label>
                     <input type="time" name="hora" id="hora" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -241,13 +238,11 @@
             <!--INPUT DATETIME-LOCAL-->
             <article>
                 <h3>Datetime-local</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>El usuario podrá elegir una fecha y una hora, sin zona horaria.
+                </p>
 
                 <form action="#">
-                    <label for="datatimelocal">Ingresá una fecha</label>
+                    <label for="datatimelocal">Ingresá fecha de nacimiento y hora</label>
                     <input type="datetime-local" name="datatimelocal" id="datatimelocal" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -256,13 +251,11 @@
             <!--INPUT MONTH-->
             <article>
                 <h3>Month</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Permite al usuario elegir un mes de un año específico.
+                </p>
 
                 <form action="#">
-                    <label for="mes">Ingresá una fecha</label>
+                    <label for="mes">Ingresá un mes</label>
                     <input type="month" id="mes" name="mes" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -271,13 +264,11 @@
             <!--INPUT WEEK-->
             <article>
                 <h3>Week</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Permite al usuario elegir una semana de un año específico.
+                </p>
 
                 <form action="#">
-                    <label for="fecha">Ingresá una fecha</label>
+                    <label for="fecha">Ingresá una semana</label>
                     <input type="week" id="fecha" name="fecha" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
@@ -310,29 +301,14 @@
             <!--INPUT RANGE-->
             <article>
                 <h3>Range</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Permite al usuario elegir un valor dentro de un rango,
+                 cuyo valor exacto no tiene importancia. Por defecto, los valores de este input son de 0 a 100.
+                 <br>Los valores predeterminados pueden modificarse a partir de los atributos min y max.
+                </p>
 
                 <form action="#">
-                    <label for="rango">Ingresá una fecha</label>
-                    <input type="range" id="rango" name="rango" class="ingreso">
-                    <input type="submit" value="¡Enviar!" class="btn">
-                </form>
-            </article>
-
-            <!--INPUT RESET-->
-            <article>
-                <h3>Reset</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
-
-                <form action="#">
-                    <label for="reset">Ingresá una fecha</label>
-                    <input type="reset" id="reset" name="reset" class="ingreso">
+                    <label for="rango">Rango de satisfacción</label>
+                    <input type="range" id="rango" name="rango" min="0" max="50" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
@@ -340,28 +316,38 @@
             <!--INPUT HIDDEN-->
             <article>
                 <h3>Hidden</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Este campo se encuentra oculto para el usuario. <br>
+                    Un input de este tipo permite a los desarrolladores agregar campos con valores que los 
+                    usuarios no podrán modificar. Sirve, por ejemplo, para actualizar bases de datos al enviar el formulario.
+                </p>
 
                 <form action="#">
-                    <label for="escondido">El input está escondido</label>
-                    <input type="hidden" id="escondido" name="escandido" class="ingreso">
+                    <label for="escondido">El input está oculto</label>
+                    <input type="hidden" id="escondido" name="escandido" value="soyunvalor" class="ingreso">
                     <input type="submit" value="¡Enviar!" class="btn">
                 </form>
             </article>
-            
+
+            <!--INPUT RESET-->
+            <article>
+                <h3>Reset</h3>
+                <p>Al clickear este botón, se reestablecen los valores predeterminados del formulario.
+                </p>
+
+                <form action="#">
+                    <label for="nombre3">Ingresá el nombre de tu mascota</label>
+                    <input id="nombre3" type="text" name="nombre3" placeholder="Ingresá tu nombre" class="ingreso">
+                    <input type="reset" value="Limpiar" class="btn">
+                </form>
+            </article>
+
             <!--INPUT SUBMIT-->
             <article>
                 <h3>Submit</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Se trata de un botón específico para enviar el formulario.
+                </p>
 
                 <form action="#">
-                    <label for="fecha">Ingresá una fecha</label>
                     <input type="submit" value="¡Soy un submit!" class="btn">
                 </form>
             </article>
@@ -369,13 +355,10 @@
             <!--INPUT BUTTON-->
             <article>
                 <h3>Button</h3>
-                <p>Ideado para el ingreso de fechas. Al tocar el ícono a la derecha del input, se despliega un
-                    calendario. Puede agregarse en atributos la posibilidad de validar valores mínimos y máximos.
-                    <br>Variantes de este input son: time, datetime-local, month, week.
-                <p>
+                <p>Define un botón sin una función predeterminada.
+                </p>
 
                 <form action="#">
-                    <label for="fecha">Ingresá una fecha</label>
                     <input type="button" value="¡Soy un botón!" class="btn">
                 </form>
             </article>
